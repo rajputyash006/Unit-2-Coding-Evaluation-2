@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit2 C2</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #banner {
+            display: flex;
+            margin: auto;
+            align-items: center;
+            justify-content: space-around;
+            background-color: #2e358f;
+            border-radius: 20px;
+        }
+
+        #banner>div:nth-child(1) {
+            margin-left: 40px;
+            color: white;
+        }
+
+        #banner>div:nth-child(2) {
+            width: 40%;
+        }
+
+        #banner>div:nth-child(1)>h1+p {
+            margin: 10px 0px;
+        }
+
+        #banner>div:nth-child(1)>button {
+            border: 1px solid white;
+            padding: 5px 10px;
+            border-radius: 10px;
+            background-color: white;
+            color: black;
+        }
+
+        #banner>div:nth-child(2)>img {
+            display: block;
+            height: 300px;
+            width: 90%;
+        }
+
+        #services {
+            margin: auto;
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(1, auto);
+            grid-template-areas:
+                "a b c d e f";
+            gap: 25px;
+        }
+
+        #services>div {
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+
+        #services>div>img {
+            height: 70%;
+            width: 100%;
+            display: block;
+            background-color: #adcfed;
+        }
+
+        #services>div>h3 {
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        #services>div>h3+h4 {
+            margin-left: 10px;
+            color: gray;
+        }
+
+        #services>div:nth-child(1) {
+            grid-area: a;
+        }
+
+        #services>div:nth-child(2) {
+            grid-area: b;
+        }
+
+        #services>div:nth-child(3) {
+            grid-area: c;
+        }
+
+        #services>div:nth-child(4) {
+            grid-area: d;
+        }
+
+        #services>div:nth-child(5) {
+            grid-area: e;
+        }
+
+        #services>div:nth-child(6) {
+            grid-area: f;
+        }
+
+        #works {
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        #works>h1 {
+            text-align: center;
+        }
+
+        #works>p {
+            text-align: center;
+        }
+
+        #works>div {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, auto);
+            gap: 25px;
+            grid-template-areas:
+                "a b c d"
+                "e f g h";
+        }
+
+        #works>div>div {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        #works>div>div>img {
+            width: 100%;
+            height: 70%;
+        }
+
+        #works>div>div>h3 {
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+
+        #works>div>div>p {
+            margin-bottom: 20px;
+            margin-left: 5px;
+        }
+
+        #works>div>div:nth-child(1) {
+            grid-area: a;
+        }
+
+        #works>div>div:nth-child(2) {
+            grid-area: b;
+        }
+
+        #works>div>div:nth-child(3) {
+            grid-area: c;
+        }
+
+        #works>div>div:nth-child(4) {
+            grid-area: d;
+        }
+
+        #works>div>div:nth-child(5) {
+            grid-area: e;
+        }
+
+        #works>div>div:nth-child(6) {
+            grid-area: f;
+        }
+
+        #works>div>div:nth-child(7) {
+            grid-area: g;
+        }
+
+        #works>div>div:nth-child(8) {
+            grid-area: h;
+        }
+
+
+
+
+        /* Medium Screen */
+        @media only screen and (min-width: 500px) and (max-width: 768px) {
+
+            #banner {
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+                align-items: center;
+                justify-content: space-between;
+                background-color: #2e358f;
+                border-radius: 20px;
+            }
+
+
+            #banner>div:nth-child(2)>img {
+                display: block;
+                height: 150px;
+            }
+
+            #services {
+                margin: auto;
+                margin-top: 30px;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, auto);
+                grid-template-areas:
+                    "a b c"
+                    "d e f";
+                gap: 15px;
+            }
+
+            #works>div {
+                margin-top: 20px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(4, auto);
+                gap: 25px;
+                grid-template-areas:
+                    "a b"
+                    "c d"
+                    "e f"
+                    "g h";
+            }
+
+            #works>div>div>p {
+                margin-left: 5px;
+            }
+        }
+
+        /* Small Screen */
+        @media only screen and (min-width: 320px) and (max-width: 499px) {
+
+            #banner {
+                display: flex;
+                flex-direction: column;
+                width: 85%;
+                margin: auto;
+                align-items: center;
+                justify-content: space-between;
+                background-color: #2e358f;
+                border-radius: 20px;
+            }
+
+            #banner>div:nth-child(2)>img {
+                display: block;
+                height: 120px;
+            }
+
+            #services {
+                margin: auto;
+                margin-top: 30px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, auto);
+                grid-template-areas:
+                    "a b"
+                    "c d"
+                    "e f";
+                gap: 25px;
+            }
+
+            #works>div {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(8, auto);
+                gap: 25px;
+                grid-template-areas:
+                    "a"
+                    "b"
+                    "c"
+                    "d"
+                    "e"
+                    "f"
+                    "g"
+                    "h";
+            }
+
+            #works>div>div>p {
+                margin-bottom: -50px;
+                margin-left: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="banner">
+            <!-- Here should be 2 divs one for the banner heading and button and the second is for banner image -->
+            <div>
+                <h1>You are in safe hands</h1>
+                <p>Choose the experts in end to end surgical care</p>
+                <button>Know More</button>
+            </div>
+            <div>
+                <img src="https://www.practostatic.com/consumer-home/practo-care/1631634827/dweb_hero_banner.png"
+                    alt="Banner Not Found">
+            </div>
+        </div>
+        <div id="services">
+            <!-- Here should be 6 divs. All of them should be in a single line for large screen. For medium and large screen refer to question statement -->
+            <div>
+                <img src="https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_instant_video_consulation.png"
+                    alt="service Image not found">
+                <h3>Instant Video
+                    Consultation</h3>
+                <h4>Connect within 60 secs</h4>
+            </div>
+            <div>
+                <img src="https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_instant_video_consulation.png"
+                    alt="service Image not found">
+                <h3>Instant Video
+                    Consultation</h3>
+                <h4>Connect within 60 secs</h4>
+            </div>
+            <div>
+                <img src="https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_instant_video_consulation.png"
+                    alt="service Image not found">
+                <h3>Instant Video
+                    Consultation</h3>
+                <h4>Connect within 60 secs</h4>
+            </div>
+            <div>
+                <img src="https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_instant_video_consulation.png"
+                    alt="service Image not found">
+                <h3>Instant Video
+                    Consultation</h3>
+                <h4>Connect within 60 secs</h4>
+            </div>
+            <div>
+                <img src="https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_instant_video_consulation.png"
+                    alt="service Image not found">
+                <h3>Instant Video
+                    Consultation</h3>
+                <h4>Connect within 60 secs</h4>
+            </div>
+            <div>
+                <img src="https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_instant_video_consulation.png"
+                    alt="service Image not found">
+                <h3>Instant Video
+                    Consultation</h3>
+                <h4>Connect within 60 secs</h4>
+            </div>
+
+
+        </div>
+        <div id="works">
+            <h1>Book an appointment for an in-clinic consultation</h1>
+            <p>Find experienced doctors across all specialties</p>
+            <div>
+                <!-- Here should be 8 divs. They should be in 4 colums and two rows for large screen.For medium and large screen refer to question statement -->
+                <div>
+                    <img src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dentist@2x.jpg"
+                        alt="work image is not found">
+                    <h3>Dentist</h3>
+                    <p>Teething trouble? Schedule a dental Checkup</p>
+                </div>
+                <div>
+                    <img src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dentist@2x.jpg"
+                        alt="work image is not found">
+                    <h3>Dentist</h3>
+                    <p>Teething trouble? Schedule a dental Checkup</p>
+                </div>
+                <div>
+                    <img src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dentist@2x.jpg"
+                        alt="work image is not found">
+                    <h3>Dentist</h3>
+                    <p>Teething trouble? Schedule a dental Checkup</p>
+                </div>
+                <div>
+                    <img src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dentist@2x.jpg"
+                        alt="work image is not found">
+                    <h3>Dentist</h3>
+                    <p>Teething trouble? Schedule a dental Checkup</p>
+                </div>
+                <div>
+                    <img src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dentist@2x.jpg"
+                        alt="work image is not found">
+                    <h3>Dentist</h3>
+                    <p>Teething trouble? Schedule a dental Checkup</p>
+                </div>
+                <div>
+                    <img src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dentist@2x.jpg"
+                        alt="work image is not found">
+                    <h3>Dentist</h3>
+                    <p>Teething trouble? Schedule a dental Checkup</p>
+                </div>
+                <div>
+                    <img src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dentist@2x.jpg"
+                        alt="work image is not found">
+                    <h3>Dentist</h3>
+                    <p>Teething trouble? Schedule a dental Checkup</p>
+                </div>
+                <div>
+                    <img src="https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dentist@2x.jpg"
+                        alt="work image is not found">
+                    <h3>Dentist</h3>
+                    <p>Teething trouble? Schedule a dental Checkup</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
